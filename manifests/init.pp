@@ -5,7 +5,7 @@ class formation_extra (
   ensure_resource('file', '/opt/puppetlabs/puppet/cache/puppet-archive', { 'ensure' => 'directory' })
   $stripped_skel_archives.each |$index, Hash $archive| {
     $filename = $archive['filename']
-    archive { "skel_${index}":
+    archive { "stripped_skel_${index}":
       path            => "/opt/puppetlabs/puppet/cache/puppet-archive/${filename}",
       extract         => true,
       extract_path    => '/etc/skel.ipa',
