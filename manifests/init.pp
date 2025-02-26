@@ -21,18 +21,18 @@ class formation_extra (
   }
 
   file { '/usr/sbin/is_event_soon.py':
-    path   => '/usr/sbin/is_event_soon.py'
-    ensure => 'file'
-    mode   => 'u+rx,go-rwx'
-    source => 'https://raw.githubusercontent.com/calculquebec/CQORC/refs/heads/main/is_event_soon.py'
+    path   => '/usr/sbin/is_event_soon.py',
+    ensure => 'file',
+    mode   => 'u+rx,go-rwx',
+    source => 'https://raw.githubusercontent.com/calculquebec/CQORC/refs/heads/main/is_event_soon.py',
     owner  => 'root'
   }
 
   file { '/etc/cq_event_check.ini':
-    path    => '/etc/cq_event_check.ini'
-    ensure  => 'file'
-    mode    => 'u+rwx,go-rwx'
-    owner   => 'root'
+    path    => '/etc/cq_event_check.ini',
+    ensure  => 'file',
+    mode    => 'u+rwx,go-rwx',
+    owner   => 'root',
     content => @("EOF"),
       # FILE MANAGED BY PUPPET, DO NOT EDIT DIRECTLY
       [DEFAULT]
