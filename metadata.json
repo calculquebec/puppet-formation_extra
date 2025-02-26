@@ -1,6 +1,6 @@
 {
     "name": "puppet-formation_extra",
-    "version": "0.1",
+    "version": "0.2",
     "author": "Maxime Boissonneault",
     "summary": "Puppet code specifique aux grappes MC de formation de CQ",
     "license": "MIT",
