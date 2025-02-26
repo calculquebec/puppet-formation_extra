@@ -1,8 +1,9 @@
 class formation_extra (
   Array[Struct[{ filename => String[1], source => String[1] }]] $stripped_skel_archives = [],
-  String google_calendar_id,
-  String google_api_key,
-  String timezone = "UTC",
+  String $google_calendar_id,
+  String $google_api_key,
+  String $timezone = "UTC",
+  String $course,
 ) {
 
   ensure_resource('file', '/opt/puppetlabs/puppet/cache/puppet-archive', { 'ensure' => 'directory' })
@@ -37,6 +38,7 @@ class formation_extra (
       [DEFAULT]
       calendar_id = ${google_calendar_id}
       apikey = ${google_api_key}
+      course = ${course}
       timezone = ${timezone}
       |EOF
   }
