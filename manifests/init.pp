@@ -17,6 +17,7 @@ class formation_extra (
       source          => $archive['source'],
       require         => File['/etc/skel.ipa'],
       notify          => Exec['chown -R root:root /etc/skel.ipa'],
+      cleanup         => false,
     }
   }
 
